@@ -1,0 +1,625 @@
+/**
+ * Shreddit Player CSS component
+ *
+ * Tap into Boilerplate and do the shredding
+ */
+ 
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    Black Theme
+   =================== */
+
+.header-container {
+    border-bottom: 20px solid #333;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #333;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: #787878;
+}
+
+.title {
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #999;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0 140px;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 10px;
+}
+
+.footer-container {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+h3 {
+    margin: 2em 0 1em;
+}
+
+aside a, footer a:visited {
+    color:white;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+article a, article a:visited {
+    color:#000;
+    font-weight:bold;
+    text-decoration:underline;
+}
+   
+h1.title {
+    background:transparent url(../img/player.png) top left no-repeat;
+    width:606px;
+    height:90px;
+    text-indent:-9999px;
+}
+
+header nav {
+    display:none;
+}
+
+#player {
+    background:white url(../img/player.png) 0px -90px no-repeat;
+    width:606px;
+    height:360px;
+    padding-top:30px;
+    padding-left:33px;
+}
+
+#video {
+    width:568px;
+    height:320px;
+    background:#000;
+}
+
+#controls {
+    background:white;
+    width:629px;
+    height:100px;
+    padding-top:20px;
+    padding-left:10px;
+}
+
+#controls div.controls {
+    width:100px;
+    height:80px;
+    float:left;
+    background:red;
+    margin-right:20px;
+    cursor:pointer;
+}
+
+#controls #prev {
+    cursor:default;
+    background:transparent url(../img/controls.png) 0px 0px no-repeat;
+    width:92px;
+}
+#controls #prev:hover {
+    background-position:-1px -85px;
+}
+
+#controls #play.paused {
+    background:transparent url(../img/controls.png) -100px 0px no-repeat;
+}
+#controls #play.paused:hover {
+    background-position:-102px -82px;
+}
+
+#controls #play.playing {
+    background:transparent url(../img/controls.png) -448px 3px no-repeat;
+}
+#controls #play.playing:hover {
+    background-position:-445px -82px;
+}
+
+#controls #stop {
+    background:transparent url(../img/controls.png) -215px 0px no-repeat;
+}
+#controls #stop:hover {
+    background-position:-213px -84px;
+}
+
+#controls #next {
+    background:transparent url(../img/controls.png) -330px 0px no-repeat;
+    width:110px;
+}
+#controls #next:hover {
+    background-position:-327px -85px;
+}
+
+#controls #hotnew {
+    background:white;
+    width:100px;
+}
+
+#controls #hotnew div.playlist div.load {
+    width:35px;
+    height:40px;
+    background:transparent url(../img/hotnew.png) 0px 0px no-repeat;
+}
+#controls #hotnew div.playlist:hover div.load {
+    background-position:0px -38px;
+}
+
+#controls #hotnew div.playlist {
+    width:100px;
+    height:40px;
+}
+
+#controls #hotnew #hot {
+    background:cyan url(../img/hotnew.png) 0px 0px no-repeat;
+}
+#controls #hotnew #new {
+    background:cyan url(../img/hotnew.png) 0px -40px no-repeat;
+}
+
+#loading {
+   width: 130px;
+   height: 160px;
+   left: 50%;
+   top: 50%; 
+   margin-left: 210px;
+   margin-top: -245px;
+   z-index:999;
+   background:#F00;
+   opacity:.70;
+   border-radius:8px;
+   padding:10px;
+   border:8px double #000;
+}
+
+#loading #penta {
+    background:transparent url(../img/pentagram.png) 0px 0px no-repeat;
+    width:130px;
+    height:130px;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+#loading #message {
+    background:transparent url(../img/loading.png) 10px 0px no-repeat;
+    width:130px;
+    height:130px;
+}
+
+#currently, #cue, #skipped {
+    display:none;
+}
+
+#currently ul {
+    font-size:80%;
+    padding-left:15px;
+    list-style: none;
+}
+
+#currently ul li {
+    text-indent: -15px;
+}
+
+#currently ul li:before {
+    content: '\25b6';
+    margin-right:5px;
+    color:#aaa;
+}
+
+#currently ul li:hover:before {
+    content: '\25b7';
+    color:#fff;
+    margin-right:5px;  
+}
+
+#skipped a {
+    color: black;
+}
+
+
+.social {
+    display: inline;
+    padding-left:1em;
+}
+
+.social div {
+    display: inline;
+}
+
+.fb-share-button {
+    position:relative;
+    top: -2px;
+}
+
+.twitter {
+    position:relative;
+    top: 5px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+    .wrapper {
+        width: 666px;
+        margin: 0 auto;
+    }
+
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 1070px) {
+
+    .wrapper {
+        width: 999px;
+        margin: 0 auto;
+    }
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 300px;
+    }
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

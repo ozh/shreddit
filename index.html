@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>SHREDDIT PLAYER</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href="assets/img/favicon.ico" rel="icon" type="image/x-icon" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- Facemoot Share button code -->
+<div id="fb-root"></div>
+<!-- /Facemoot Share button code -->
+
+
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title">SHREDDIT PLAYER</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">nav ul li a</a></li>
+                    <li><a href="#">nav ul li a</a></li>
+                    <li><a href="#">nav ul li a</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix">
+
+            <article>
+                <div id="player">
+                    <div id="video"></div>
+
+                    <div id="loading">
+                        <div id="penta"></div>
+                        <div id="message"></div>
+                    </div>
+                </div>
+                
+                <div id="controls">
+                    <div class="controls" id="prev"></div>
+                    <div class="controls paused" id="play"></div>
+                    <div class="controls" id="stop"></div>
+                    <div class="controls" id="next"></div>
+
+                    <div class="controls" id="hotnew">
+                        <div class="playlist" id="hot" title="Reload HOT playlist">
+                            <div class="load"></div>
+                        </div>
+                        <div class="playlist" id="new" title="Reload NEW playlist">
+                            <div class="load"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+            
+            <aside>
+                <div>
+                    <p>A seamless playlist of videos submitted on <a href="http://www.reddit.com/r/Metal/">/r/Metal/</a> aka <strong>Shreddit</strong>.</p>
+                    
+                    <div id="cue">
+                        <h3>Your fresh playlist :</h3>
+                        <p><strong id="cue_count">1337</strong> songs from the <a href="http://www.reddit.com/r/Metal/">/r/Metal/</a> queue \m/</p>
+                    
+                    </div>
+                    
+                    <div id="currently">
+                        <h3>Now shredding :</h3>
+                        <ul>
+                        <li id="cur_song"><a href="https://www.youtube.com/watch?v=rYBgWgjjgxQ">Be'Lakor - Abeyance</a></li>
+                        <li id="cur_style">Genre: Melodic Death Metal</li>
+                        <li id="cur_comments"><a href="http://ozh.org/">1337 comments</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </aside>
+
+            <article id="skipped">
+                <h3>Videos you'll have to watch manually</h3>
+                <ul>
+                </ul>
+            </article>
+
+            <article id="about">
+                <h3>Abovt...</h3>
+                <p>The <strong>Shreddit Player</strong> fetches the first 3 pages from the "hot" queue (<a href="http://www.reddit.com/r/Metal/">/r/Metal/</a> front page) or the "new" queue (<a href="http://www.reddit.com/r/Metal/new/">/r/Metal/new/</a> submissions) and makes one neat playlist with all the Youtube videos found, so you don't have to click on each and every link. Load the Shreddit Player, lean back, enjoy.</p>
+                <p>When the playlist ends, it will <strong>refresh</strong> itself to get new videos from Shreddit. You can also force the playlist refresh with the "<strong>HOT</strong>" and "<strong>NEW</strong>" buttons.</p>
+                <p>Some videos on Youtube forbid embedding into other websites and force you to watch them one by one on Youtube :-( If any such video is added to the playlist, it will be listed below the video player.</p>
+            </article>
+
+        </div> <!-- #main -->
+            
+    </div> <!-- #main-container -->
+
+    <div class="footer-container">
+        <footer class="wrapper">
+        
+            <div>
+                <span>If you like the Shreddit Player, say "hi!" to <a href="https://twitter.com/ozh">@ozh</a> and tell your friends about it \m/</span>
+
+                <div class="social">
+                    <div class="twitter">
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-text="The Shreddit Player \m/" data-via="ozh" data-hashtags="metal">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    </div>
+                    
+                    <script>(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=607241649288344&version=v2.0";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+                    <div class="fb-share-button" data-href="http://ozh.org/shreddit/" data-layout="button_count"></div>
+                </div>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- Google Analytics -->
+    <script>
+    !function(m,e,t,a,l){m.GoogleAnalyticsObject=t,m[t]||(m[t]=function(){(m[t].q=m[t].q||[]).push(arguments)}),m[t].l=+new Date,a=e.createElement("script"),l=e.scripts[0],a.src="//www.google-analytics.com/analytics.js",l.parentNode.insertBefore(a,l)}(this,document,"ga");
+    ga("create", "UA-666-6");
+    ga("send", "pageview");
+    </script>
+    
+</body>
+</html>
