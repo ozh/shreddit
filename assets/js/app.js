@@ -51,7 +51,6 @@ function onPlayerChange( event ) {
         case 0:
             // ended -- reload playlist if we just played the last song
             if( ( player.getPlaylistIndex() + 1 ) == Object.keys( shredlist ).length ) {
-                update_page_title( '' );
                 get_playlist_and_play();
             }
             break;
@@ -282,7 +281,6 @@ function update_currently( song ) {
  * Change the page title with the song title (trimmed down to 30 chars if longer)
  */
 function update_page_title( song_title ) {
-    console.log( 'update title', song_title );
     if ( song_title.length > 30) {
         song_title = song_title.substr(0, 27) + '...';
     }
