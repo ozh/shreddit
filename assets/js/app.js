@@ -6,6 +6,8 @@
  */
 
 // global variables for the player
+var reddit = 'http://www.reddit.com/r/Metal/'; // Sub reddit -- trailing slash -- same than in /app/init.php
+
 var player;         // Youtube object
 var current_song;   // Youtube ID of the currently playing song, ie 'OmG_MeT4l' in 'https://www.youtube.com/watch?v=OmG_MeT4l'
 var shredlist;      // Shreddit playlist
@@ -182,7 +184,7 @@ function get_playlist( page ) {
             // Update the playlist text
             $( '#cue' ).show( 'slow' );
             $( '#cue_count' ).html( Object.keys( shredlist ).length );
-            var url = 'http://www.reddit.com/r/Metal/' + ( page == 'hot' ? '' : 'new/' );
+            var url = reddit + ( page == 'hot' ? '' : 'new/' );
             $( '#cue a' ).attr( 'href', url ).html( page );
             
             // Load playlist into the player and ROCK ON \m/

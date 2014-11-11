@@ -35,11 +35,11 @@ function shr_get_playlist( $page = 'hot' ) {
 
     switch( $page ) {
         case 'new':
-            $url = 'http://www.reddit.com/r/Metal/new/';
+            $url = REDDIT . 'new/';
             break;
         case 'hot':
         default:
-            $url = 'http://www.reddit.com/r/Metal/';
+            $url = REDDIT;
     }
 
     $playlist = array();
