@@ -94,9 +94,7 @@ function shr_get_youtube_items( $url ) {
         $href = $item->find( 'p.title a.title' );
         $href = $href[0]->attr['href'];
 
-        if( shr_is_youtube( $href ) ) {
-            $id = shr_get_youtube_id( $href );
-            
+        if( shr_is_youtube( $href ) && $id = shr_get_youtube_id( $href ) ) {
             $title = $item->find( 'p.title a.title', 0 )->innertext;
             $style = shr_get_style( $title );
             
@@ -181,23 +179,24 @@ function shr_get_youtube_id( $url ) {
     // http://youtu.be/OmGM3T4L
     // http://www.youtube.com/attribution_link?a=VGixIntYNbo&u=%2Fwatch%3Fv%3DOmGM3T4L%26feature%3Dshare
     // http://youtu.be/OmGM3T4L?t=1s
+    // https://www.youtube.com/watch?feature=player_embedded&amp;v=OmGM3T4L
+    // http://www.youtube.com/playlist?list=PLC63wGLyaVgJNRS6sNz9Q4fPkBni9cuzf must return false
     
-    $url = urldecode( $url );
+    $url = htmlspecialchars_decode( urldecode( $url ) );
     
     $host = str_replace( 'www.', '', parse_url( $url, PHP_URL_HOST ) );
     
     switch( $host ) {
         case 'youtube.com':
-            preg_match( '/\?v=([^&#\?]*)/', $url, $matches );
-            return $matches[1];
+            preg_match( '/v=([^&#\?]*)/', parse_url( $url, PHP_URL_QUERY ), $matches );
             break;
             
         case 'youtu.be':
             preg_match( '!be/([^&#\?]*)!', $url, $matches );
-            return $matches[1];
             break;
-
     }
+    
+    return ( isset( $matches[1] ) ? $matches[1] : false );
 }
 
 
