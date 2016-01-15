@@ -6,7 +6,7 @@
  */
 
 // global variables for the player
-var reddit = 'http://www.reddit.com/r/Metal/'; // Sub reddit -- trailing slash -- same than in /app/init.php
+var reddit = 'https://www.reddit.com/r/Metal/'; // Sub reddit -- trailing slash -- same than in /app/init.php
 
 var player;         // Youtube object
 var current_song;   // Youtube ID of the currently playing song, ie 'OmG_MeT4l' in 'https://www.youtube.com/watch?v=OmG_MeT4l'
